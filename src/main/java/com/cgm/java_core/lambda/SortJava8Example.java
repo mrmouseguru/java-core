@@ -15,8 +15,10 @@ public class SortJava8Example {
 				// Sử dụng phương thức tiện ích của Collections 
 				// để sắp xếp lại danh sách trên.
 				// Cung cấp một Comparator (Bộ so sách).
-				Collections.sort(fruits, 
-						(o1, o2 ) -> {return o1.compareTo(o2);});
+				Comparator<String> comparator = (o1, o2 ) -> {return o1.compareTo(o2);};
+				
+				Collections.sort(fruits, comparator
+						);
 
 				for (String fruit : fruits) {
 					System.out.println(fruit);
